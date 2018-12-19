@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="kernels1_itiModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="attendance">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="updatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeviceTime" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="deviceid" Type="Int32" />
+    <Property Name="fingerid" Type="Int32" />
+    <Property Name="message" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="devicename" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ElectricityMeter">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="updatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeviceTime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="deviceid" Type="Int32" />
+    <Property Name="devicename" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="voltage" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="currentamp" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="Units" Type="Decimal" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="GP">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="lat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="longitude" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="deviceid" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="updatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeviceTime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Login">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fullname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="id" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SmartElectricityMeter">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="Voltage" Type="Int32" />
+    <Property Name="CurrentValue" Type="Int32" />
+    <Property Name="Units" Type="Int32" />
+    <Property Name="updatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeviceTime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="deviceid" Type="Int32" />
+  </EntityType>
+  <EntityType Name="SmartEnergy">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="updatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeviceTime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="deviceid" Type="Int32" />
+    <Property Name="devicename" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="powerfactor" Type="Decimal" Precision="2" Scale="2" />
+    <Property Name="currentamp" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="frequency" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="voltage" Type="Decimal" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="Temperature">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="updatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeviceTime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="deviceid" Type="Int32" />
+    <Property Name="devicename" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="temp" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="faht" Type="Decimal" Precision="5" Scale="2" />
+  </EntityType>
+  <EntityType Name="Temperature_ITI">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="updatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeviceTime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="deviceid" Type="Int32" />
+    <Property Name="devicename" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="temp" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="faht" Type="Decimal" Precision="5" Scale="2" />
+  </EntityType>
+  <EntityType Name="VehicleTracking">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="updatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeviceTime" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="deviceid" Type="Int32" />
+    <Property Name="Latitude" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Longitude" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="devicename" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="kernels1_itiEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="attendances" EntityType="Self.attendance" />
+    <EntitySet Name="ElectricityMeters" EntityType="Self.ElectricityMeter" />
+    <EntitySet Name="GPS" EntityType="Self.GP" />
+    <EntitySet Name="Logins" EntityType="Self.Login" />
+    <EntitySet Name="SmartElectricityMeters" EntityType="Self.SmartElectricityMeter" />
+    <EntitySet Name="SmartEnergies" EntityType="Self.SmartEnergy" />
+    <EntitySet Name="Temperatures" EntityType="Self.Temperature" />
+    <EntitySet Name="Temperature_ITI" EntityType="Self.Temperature_ITI" />
+    <EntitySet Name="VehicleTrackings" EntityType="Self.VehicleTracking" />
+    <EntitySet Name="Users" EntityType="kernels1_itiModel.User" />
+  </EntityContainer>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

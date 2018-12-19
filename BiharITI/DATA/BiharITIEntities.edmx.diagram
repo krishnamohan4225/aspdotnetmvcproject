@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1aed1dc266734654821f648630460351" Name="Diagram1">
+        <EntityTypeShape EntityType="kernels1_itiModel.attendance" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="kernels1_itiModel.ElectricityMeter" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="kernels1_itiModel.GP" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="kernels1_itiModel.Login" Width="1.5" PointX="0.875" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="kernels1_itiModel.SmartElectricityMeter" Width="1.5" PointX="3.125" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="kernels1_itiModel.SmartEnergy" Width="1.5" PointX="10.875" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="kernels1_itiModel.Temperature" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="kernels1_itiModel.Temperature_ITI" Width="1.5" PointX="6.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="kernels1_itiModel.VehicleTracking" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="kernels1_itiModel.User" Width="1.5" PointX="3.375" PointY="7.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

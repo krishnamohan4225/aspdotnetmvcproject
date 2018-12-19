@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Calculator";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Calculator</h2>
+
+@using (Html.BeginForm("calculator", "Home"))
+{
+    <div class="row">
+        <div class="col-sm-3">
+            <input type="text" name="num1" class="form-control" value="@ViewBag.num1" placeholder="enter number 1"/>
+        </div>
+        <div class="col-sm-3">
+            <input type="text" name="num2" class="form-control" value="@ViewBag.num2" placeholder="enter number 2" />
+        </div>
+        <div class="col-sm-3">
+            <input type="submit" class="btn btn-primary" name="name" value="submit" />
+        </div>
+        <div class="col-sm-3">
+            <label>@ViewBag.sum</label>
+        </div>
+    </div>
+}
+

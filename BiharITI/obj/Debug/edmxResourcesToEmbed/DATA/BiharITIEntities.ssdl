@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="kernels1_itiModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="attendance">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="updatedDate" Type="datetime" />
+    <Property Name="DeviceTime" Type="nvarchar" MaxLength="20" />
+    <Property Name="deviceid" Type="int" />
+    <Property Name="fingerid" Type="int" />
+    <Property Name="message" Type="varchar" MaxLength="20" />
+    <Property Name="devicename" Type="varchar" MaxLength="20" />
+    <Property Name="status" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="ElectricityMeter">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="updatedDate" Type="datetime" />
+    <Property Name="DeviceTime" Type="nvarchar" MaxLength="50" />
+    <Property Name="deviceid" Type="int" />
+    <Property Name="devicename" Type="varchar" MaxLength="20" />
+    <Property Name="voltage" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="currentamp" Type="decimal" Precision="5" Scale="2" />
+    <Property Name="Units" Type="decimal" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="GPS">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="lat" Type="nvarchar" MaxLength="50" />
+    <Property Name="longitude" Type="nvarchar" MaxLength="50" />
+    <Property Name="deviceid" Type="nvarchar" MaxLength="10" />
+    <Property Name="updatedDate" Type="datetime" />
+    <Property Name="DeviceTime" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'kernels1_iti.dbo.Login' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Login">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="Username" Type="varchar" MaxLength="50" />
+    <Property Name="password" Type="varchar" MaxLength="50" />
+    <Property Name="fullname" Type="varchar" MaxLength="50" />
+    <Property Name="id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SmartElectricityMeter">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Voltage" Type="int" />
+    <Property Name="CurrentValue" Type="int" />
+    <Property Name="Units" Type="int" />
+    <Property Name="updatedDate" Type="datetime" />
+    <Property Name="DeviceTime" Type="nvarchar" MaxLength="50" />
+    <Property Name="deviceid" Type="int" />
+  </EntityType>
+  <EntityType Name="SmartEnergy">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="updatedDate" Type="datetime" />
+    <Property Name="DeviceTime" Type="nvarchar" MaxLength="50" />
+    <Property Name="deviceid" Type="int" />
+    <Property Name="devicename" Type="varchar" MaxLength="20" />
+    <Property Name="powerfactor" Type="decimal" Precision="2" Scale="2" />
+    <Property Name="currentamp" Type="decimal" Precision="5" Scale="2" />
+    <Property Name="frequency" Type="decimal" Precision="5" Scale="2" />
+    <Property Name="voltage" Type="decimal" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="Temperature">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="updatedDate" Type="datetime" />
+    <Property Name="DeviceTime" Type="nvarchar" MaxLength="50" />
+    <Property Name="deviceid" Type="int" />
+    <Property Name="devicename" Type="varchar" MaxLength="20" />
+    <Property Name="temp" Type="decimal" Precision="5" Scale="2" />
+    <Property Name="faht" Type="decimal" Precision="5" Scale="2" />
+  </EntityType>
+  <EntityType Name="Temperature_ITI">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="updatedDate" Type="datetime" />
+    <Property Name="DeviceTime" Type="nvarchar" MaxLength="50" />
+    <Property Name="deviceid" Type="int" />
+    <Property Name="devicename" Type="varchar" MaxLength="20" />
+    <Property Name="temp" Type="decimal" Precision="5" Scale="2" />
+    <Property Name="faht" Type="decimal" Precision="5" Scale="2" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="VehicleTracking">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="updatedDate" Type="datetime" />
+    <Property Name="DeviceTime" Type="nvarchar" MaxLength="20" />
+    <Property Name="deviceid" Type="int" />
+    <Property Name="Latitude" Type="varchar" MaxLength="20" />
+    <Property Name="Longitude" Type="varchar" MaxLength="20" />
+    <Property Name="devicename" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityContainer Name="kernels1_itiModelStoreContainer">
+    <EntitySet Name="attendance" EntityType="Self.attendance" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ElectricityMeter" EntityType="Self.ElectricityMeter" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GPS" EntityType="Self.GPS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SmartElectricityMeter" EntityType="Self.SmartElectricityMeter" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SmartEnergy" EntityType="Self.SmartEnergy" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Temperature" EntityType="Self.Temperature" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Temperature_ITI" EntityType="Self.Temperature_ITI" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VehicleTracking" EntityType="Self.VehicleTracking" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Login" EntityType="Self.Login" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Login].[Username] AS [Username], 
+    [Login].[password] AS [password], 
+    [Login].[fullname] AS [fullname], 
+    [Login].[id] AS [id]
+    FROM [dbo].[Login] AS [Login]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

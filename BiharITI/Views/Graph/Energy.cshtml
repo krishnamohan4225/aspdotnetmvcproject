@@ -1,0 +1,106 @@
+﻿@{
+    ViewBag.Title = "Energy Meter Graph";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h4>Energy Trend</h4>
+<body>
+    <div id="container" style="height:500px"></div>
+</body>
+@section scripts{
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script>
+        getData();
+        function getData() {
+            xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    var dataSet = JSON.parse(xhttp.responseText);
+                    console.log(dataSet);
+                   //y axis is temperature
+                    var labels = dataSet.map(function (e) {
+                        return (e.voltage);
+                    });
+                    //y axis for frequency
+                    var labels_freq = dataSet.map(function (e) {
+                        return (e.frequency);
+                    });
+
+                    //y axis for frequency
+                    var labels_current = dataSet.map(function (e) {
+                        return (e.currentamp);
+                    });
+                    //x axis for date time field
+                    var data = dataSet.map(function (e) {
+                        var updDate = UtcToIst(e.updatedDate).toLocaleDateString();
+                        var updTime = UtcToIst(e.updatedDate).toLocaleTimeString();
+                        var updDateTime = updDate + ", " + updTime;
+                        return updDateTime;
+                    });
+                    //high charts starting
+                    Highcharts.chart('container', {
+                        title: {
+                            text: 'Energy Meter Graph'
+                        },
+                        subtitle: {
+                            text: 'Bihar ITI project'
+                        },
+                        xAxis: {
+                            categories:data
+                        },
+                        yAxis: {
+                            scrollbar: {
+                                enabled: true,
+                                showFull: false
+                            },
+                            title: {
+                                text: 'voltage graph'
+                            }
+
+                        },
+                        legend: {
+                            layout: 'vertical',
+                            align: 'right',
+                            verticalAlign: 'middle'
+                        },
+                        series: [{
+                            name: 'Voltage',
+                            data: labels
+                        },
+                        {
+                            name: 'Frequency',
+                            data: labels_freq
+                        },
+                        {
+                            name: 'Current',
+                            data: labels_current
+                        }],
+                        responsive: {
+                            rules: [{
+                                condition: {
+                                    maxWidth: 500
+                                },
+                                chartOptions: {
+                                    legend: {
+                                        layout: 'horizontal',
+                                        align: 'center',
+                                        verticalAlign: 'bottom'
+                                    }
+                                }
+                            }]
+                        }
+                    });
+                    //high charts ending
+                }
+            };
+            xhttp.open("GET", "/api/energy", true);//nodes/ul
+            xhttp.send();
+        }
+        function UtcToIst(data) {
+            var dt = new Date(data);
+            return dt;
+        }
+    </script>
+}

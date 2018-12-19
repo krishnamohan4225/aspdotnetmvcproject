@@ -1,0 +1,91 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .btn-space {
+        margin-left: -5%;
+        background-color: cornflowerblue;
+        font-size: large;
+    }
+</style>
+<script src="~/Scripts/angular.min.js"></script>
+<script src="~/Scripts/AngularCode.js"></script>
+<div ng-app="myApp">
+    <div ng-controller="myCtrl" ng-init="GetAllData()" class="divList">
+        <p class="divHead">List of Users</p>
+        <table cellpadding="12" class="table table-bordered table-hover">
+            <tr>
+                <td>
+                    <b>UserID</b>
+                </td>
+                <td>
+                    <b>Username</b>
+                </td>
+                <td>
+                    <b>Password</b>
+                </td>
+                <td>
+                    <b>Edit</b>
+                </td>
+            </tr>
+            <tr ng-repeat="Emp in employees">
+                <td>
+                    {{Emp.UserID}}
+                </td>
+                <td>
+                    {{Emp.Username}}
+                </td>
+                <td>
+                    {{Emp.Password}}
+                </td>
+                <td>
+                    <input type="button" class="btn btn-warning" value="Update" ng-click="UpdateEmp(Emp)" />
+                    <input type="button" class="btn btn-danger" value="Delete" ng-click="DeleteEmp(Emp)" />
+                </td>
+            </tr>
+        </table>
+        <div class="form-horizontal" role="form">
+            <div class="container">
+                <div class="row">
+                    <h4>
+                        <span id="spn">Add New User</span>
+                    </h4>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">UserName:</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" id="inputEmail" placeholder="Username" ng-model="Username">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Password:</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" id="inputPassword" placeholder="Password" ng-model="Password">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="form-group">
+                            <br />
+                            <div class="col-md-8">
+                                <input type="button" id="btnSave" class="form-control btn-space" value="Submit" ng-click="InsertData()" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    @Html.Hidden("EmpID_")
+
+</div>
+

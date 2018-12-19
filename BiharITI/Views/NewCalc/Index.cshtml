@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Calculator </h2>
+
+@using (Html.BeginForm("calculatorPost", "NewCalc"))
+{
+<div class="row">
+    <div class="col-sm-3">
+        <input type="text" name="num1" value="" class="form-control" placeholder="enter a 1st value" />
+    </div>
+    <div class="col-sm-3">
+        <input type="text" name="num2" value="" class="form-control" placeholder="enter a 2nd value" />
+    </div>
+    <div class="col-sm-3">
+        <input type="button" name="name" value="Submit" class="btn btn-primary" />
+    </div>
+    <div class="col-sm-3">
+       <label>Result : </label>
+    </div>
+</div>
+}

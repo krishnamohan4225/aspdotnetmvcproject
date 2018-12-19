@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="kernels1_itiModelStoreContainer" CdmEntityContainer="kernels1_itiEntities">
+    <EntitySetMapping Name="attendances">
+      <EntityTypeMapping TypeName="kernels1_itiModel.attendance">
+        <MappingFragment StoreEntitySet="attendance">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="updatedDate" ColumnName="updatedDate" />
+          <ScalarProperty Name="DeviceTime" ColumnName="DeviceTime" />
+          <ScalarProperty Name="deviceid" ColumnName="deviceid" />
+          <ScalarProperty Name="fingerid" ColumnName="fingerid" />
+          <ScalarProperty Name="message" ColumnName="message" />
+          <ScalarProperty Name="devicename" ColumnName="devicename" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ElectricityMeters">
+      <EntityTypeMapping TypeName="kernels1_itiModel.ElectricityMeter">
+        <MappingFragment StoreEntitySet="ElectricityMeter">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="updatedDate" ColumnName="updatedDate" />
+          <ScalarProperty Name="DeviceTime" ColumnName="DeviceTime" />
+          <ScalarProperty Name="deviceid" ColumnName="deviceid" />
+          <ScalarProperty Name="devicename" ColumnName="devicename" />
+          <ScalarProperty Name="voltage" ColumnName="voltage" />
+          <ScalarProperty Name="currentamp" ColumnName="currentamp" />
+          <ScalarProperty Name="Units" ColumnName="Units" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GPS">
+      <EntityTypeMapping TypeName="kernels1_itiModel.GP">
+        <MappingFragment StoreEntitySet="GPS">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="lat" ColumnName="lat" />
+          <ScalarProperty Name="longitude" ColumnName="longitude" />
+          <ScalarProperty Name="deviceid" ColumnName="deviceid" />
+          <ScalarProperty Name="updatedDate" ColumnName="updatedDate" />
+          <ScalarProperty Name="DeviceTime" ColumnName="DeviceTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Logins">
+      <EntityTypeMapping TypeName="kernels1_itiModel.Login">
+        <MappingFragment StoreEntitySet="Login">
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="fullname" ColumnName="fullname" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SmartElectricityMeters">
+      <EntityTypeMapping TypeName="kernels1_itiModel.SmartElectricityMeter">
+        <MappingFragment StoreEntitySet="SmartElectricityMeter">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Voltage" ColumnName="Voltage" />
+          <ScalarProperty Name="CurrentValue" ColumnName="CurrentValue" />
+          <ScalarProperty Name="Units" ColumnName="Units" />
+          <ScalarProperty Name="updatedDate" ColumnName="updatedDate" />
+          <ScalarProperty Name="DeviceTime" ColumnName="DeviceTime" />
+          <ScalarProperty Name="deviceid" ColumnName="deviceid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SmartEnergies">
+      <EntityTypeMapping TypeName="kernels1_itiModel.SmartEnergy">
+        <MappingFragment StoreEntitySet="SmartEnergy">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="updatedDate" ColumnName="updatedDate" />
+          <ScalarProperty Name="DeviceTime" ColumnName="DeviceTime" />
+          <ScalarProperty Name="deviceid" ColumnName="deviceid" />
+          <ScalarProperty Name="devicename" ColumnName="devicename" />
+          <ScalarProperty Name="powerfactor" ColumnName="powerfactor" />
+          <ScalarProperty Name="currentamp" ColumnName="currentamp" />
+          <ScalarProperty Name="frequency" ColumnName="frequency" />
+          <ScalarProperty Name="voltage" ColumnName="voltage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Temperatures">
+      <EntityTypeMapping TypeName="kernels1_itiModel.Temperature">
+        <MappingFragment StoreEntitySet="Temperature">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="updatedDate" ColumnName="updatedDate" />
+          <ScalarProperty Name="DeviceTime" ColumnName="DeviceTime" />
+          <ScalarProperty Name="deviceid" ColumnName="deviceid" />
+          <ScalarProperty Name="devicename" ColumnName="devicename" />
+          <ScalarProperty Name="temp" ColumnName="temp" />
+          <ScalarProperty Name="faht" ColumnName="faht" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Temperature_ITI">
+      <EntityTypeMapping TypeName="kernels1_itiModel.Temperature_ITI">
+        <MappingFragment StoreEntitySet="Temperature_ITI">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="updatedDate" ColumnName="updatedDate" />
+          <ScalarProperty Name="DeviceTime" ColumnName="DeviceTime" />
+          <ScalarProperty Name="deviceid" ColumnName="deviceid" />
+          <ScalarProperty Name="devicename" ColumnName="devicename" />
+          <ScalarProperty Name="temp" ColumnName="temp" />
+          <ScalarProperty Name="faht" ColumnName="faht" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VehicleTrackings">
+      <EntityTypeMapping TypeName="kernels1_itiModel.VehicleTracking">
+        <MappingFragment StoreEntitySet="VehicleTracking">
+          <ScalarProperty Name="devicename" ColumnName="devicename" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="updatedDate" ColumnName="updatedDate" />
+          <ScalarProperty Name="DeviceTime" ColumnName="DeviceTime" />
+          <ScalarProperty Name="deviceid" ColumnName="deviceid" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="kernels1_itiModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

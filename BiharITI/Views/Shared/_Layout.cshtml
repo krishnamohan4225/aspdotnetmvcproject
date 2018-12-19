@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="@Url.Content("~/Images/favicon.png")" />
+    <title>Bihar ITI Project - KernelSphere Technologies Pvt Ltd.</title>
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="~/Styles/style.css" />
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Internet Of Things</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="@Url.Action("Index","Electricity")">SparkM</a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Index","Energy")">PowerM</a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Index","Temperature")">ClimeT</a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Index","Tracker")">WagonT</a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Index", "Attendance")">StainS</a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Index", "Tracker")">NavigT</a>
+                </li>
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Graphs</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="@Url.Action("Index", "Graph")">Temperature</a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("ElectricMeter", "Graph")">ELectricity Meter</a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Energy", "Graph")">Energy Meter</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+
+                    </button>
+
+
+                    <button style="margin-left:10px" type="button" id="" class="btn btn-info" onClick="window.location.reload()">
+                        <i class="fas fa-sync-alt"></i>
+
+                    </button>
+
+                    <a href="@Url.Action("Index", "Home")">
+                        <button style="margin-left:10px" type="button" id="" class="btn btn-info">
+                            <i class="fas fa-home">    </i>
+                        </button>
+                    </a>
+
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="@Url.Action("Index","Electricity")">SparkM</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="@Url.Action("Index","Energy")">PowerM</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="@Url.Action("Index","Temperature")">ClimeT</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="@Url.Action("Index","Tracker")">WagonT</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="@Url.Action("Index", "Attendance")">StainS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="@Url.Action("Index", "Tracker")">NavigT</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="@Url.Action("LogOut", "Account")" class="nav-link">
+                                    <i class="fas fa-sign-out-alt"></i>Logout
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            @RenderBody()
+           
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="page-footer font-small black" style="background-color:#1E282D">
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">
+            <span style="color:white"> © 2018 Copyright:</span>
+            <a href="https://kernelsphere.com" style="color:white"> Kernelsphere Technologies Pvt.Ltd</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
