@@ -1,4 +1,4 @@
-This is a IoT Project developed in .net framework with MVC Architecture with frontend bootstrap 4 and HTML. 
+This is Dynamic Web application for IoT Project developed in .net framework 4.6.1 with MVC Architecture with frontend bootstrap 4 and HTML5. 
 ************************************
 Modules
 LOGIN
