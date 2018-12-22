@@ -1,4 +1,4 @@
-This is Real Time Live Running Dynamic Web application for IoT Project developed in .net framework 4.6.1 with MVC Architecture with frontend bootstrap 4 and HTML5. 
+This is Real Time Live Running Dynamic Web application for IoT Project developed in .net framework 4.6.1 with MVC5 Architecture with front end bootstrap 4 and HTML5. 
 ************************************
 Modules
 ---------
@@ -7,7 +7,7 @@ REGISTRATION
 DEVELOPING REST API
 DASHBOARD
 REPORTS IN JQUERY DATA TABLE
-CRUD OPERTION WITH ANGULAR CORE 
+CRUD OPERATION WITH ANGULAR CORE 
 GRAPHS WITH HIGH CHARTS
 
 **************************************
