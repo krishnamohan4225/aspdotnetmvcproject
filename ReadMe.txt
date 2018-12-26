@@ -13,12 +13,12 @@ GRAPHS WITH HIGH CHARTS
 **************************************
 Technologies used for this project are 
 --------------------------------------
-ASP.NET MVC
+ASP.NET MVC5
 C#
 ENTITY FRAMEWORK 6
 WEB API 2.1
 JAVASCRIPT
-JQUERY
+JQUERY, J-QUERY UI & JQUERY AJAX
 HTML
 CSS
 BOOTSTRAP 4
